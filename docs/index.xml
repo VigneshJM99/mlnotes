@@ -6,9 +6,37 @@
     <description>Recent content on Vignesh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 12 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://VigneshJM99.github.io/mlnotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python Multiplication</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/basics/python-multiplication/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/basics/python-multiplication/</guid>
+      <description>a = 9991 b = 2020 print(a*b) 20181820  </description>
+    </item>
+    
+    <item>
+      <title>Python-Addition</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/basics/pyhton-addition/</link>
+      <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/basics/pyhton-addition/</guid>
+      <description>a = 1999 b = 2020 print (a+b) 4019  </description>
+    </item>
+    
+    <item>
+      <title>Template</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/basics/python-equation/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/basics/python-equation/</guid>
+      <description>a = 52 b = 657 c = 2 d = 6 print(a+b**c/d) 71993.5  </description>
+    </item>
     
   </channel>
 </rss>
