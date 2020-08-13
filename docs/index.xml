@@ -13,10 +13,10 @@
     
     <item>
       <title>Pandas</title>
-      <link>https://VigneshJM99.github.io/mlnotes/python/python-packages/pandas/pandas/</link>
+      <link>https://VigneshJM99.github.io/mlnotes/python/python-packages/pandas/</link>
       <pubDate>Wed, 12 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://VigneshJM99.github.io/mlnotes/python/python-packages/pandas/pandas/</guid>
+      <guid>https://VigneshJM99.github.io/mlnotes/python/python-packages/pandas/</guid>
       <description>import pandas as pddf = pd.read_csv(&amp;#39;diabetes.csv&amp;#39;)df  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Pregnancies Glucose BloodPressure SkinThickness Insulin BMI DiabetesPedigreeFunction Age Outcome     0 6 148 72 35 0 33.6 0.627 50 1   1 1 85 66 29 0 26.6 0.351 31 0   2 8 183 64 0 0 23.</description>
     </item>
     
