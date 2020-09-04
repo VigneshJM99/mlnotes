@@ -93,12 +93,39 @@
     </item>
     
     <item>
+      <title>Data As Table</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sklearn/data-as-table/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sklearn/data-as-table/</guid>
+      <description>import seaborn as snsiris = sns.load_dataset(&amp;#39;iris&amp;#39;)iris.head()  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    sepal_length sepal_width petal_length petal_width species     0 5.1 3.5 1.4 0.2 setosa   1 4.9 3.0 1.4 0.2 setosa   2 4.7 3.2 1.3 0.2 setosa   3 4.6 3.1 1.5 0.</description>
+    </item>
+    
+    <item>
+      <title>Data As Target</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sklearn/data-as-target/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sklearn/data-as-target/</guid>
+      <description>import seaborn as sns import seaborn as sns; sns.set()iris = sns.load_dataset(&amp;#39;iris&amp;#39;) %matplotlib inline sns.pairplot(iris, hue=&amp;#39;species&amp;#39;, height=3); X_iris = iris.drop(&amp;#39;species&amp;#39;, axis=1) X_iris.shape (150, 4)  y_iris = iris[&amp;#39;species&amp;#39;] y_iris.shape (150,)  </description>
+    </item>
+    
+    <item>
       <title>Data Types</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/pandas/data-types/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/pandas/data-types/</guid>
       <description>import pandas as pddf = pd.read_excel(&amp;#39;Car_Pricing.xlsx&amp;#39;)df.Mileage.dtype dtype(&#39;O&#39;)  df.dtypes Name object Location object Year int64 Kilometers_Driven int64 Fuel_Type object Transmission object Owner_Type object Mileage object Engine object Power object Seats float64 dtype: object  df.Kilometers_Driven.astype(&amp;#39;float64&amp;#39;) 0 40929.0 1 54493.0 2 34000.0 3 139000.0 4 29000.0 ... 1229 89411.0 1230 59000.0 1231 28000.0 1232 52262.0 1233 72443.0 Name: Kilometers_Driven, Length: 1234, dtype: float64  </description>
+    </item>
+    
+    <item>
+      <title>Example</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/example/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/example/</guid>
+      <description>import seaborn as sns iris = sns.load_dataset(&amp;#39;iris&amp;#39;)X_iris = iris.drop(&amp;#39;species&amp;#39;, axis = 1) X_iris.shape (150, 4)  y_iris = iris[&amp;#39;species&amp;#39;] y_iris.shape (150,)  %matplotlib inline import matplotlib.pyplot as plt import numpy as np rng = np.random.RandomState(35) x = 10*rng.rand(40) y = 2*x-1+rng.randn(40) plt.scatter(x,y); </description>
     </item>
     
     <item>
@@ -309,12 +336,30 @@
     </item>
     
     <item>
+      <title>Supervised Learning</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sklearn/supervised-learning/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sklearn/supervised-learning/</guid>
+      <description>%matplotlib inline import matplotlib.pyplot as plt import numpy as np import seaborn as snsiris = sns.load_dataset(&amp;#39;iris&amp;#39;)X_iris = iris.drop(&amp;#39;species&amp;#39;, axis = 1) X_iris.shape (150, 4)  y_iris = iris[&amp;#39;species&amp;#39;] y_iris.shape (150,)  rng = np.random.RandomState(35) x = 10*rng.rand(40) y = 2*x-1+rng.randn(40) plt.scatter(x,y); from sklearn.linear_model import LinearRegression model = LinearRegression(fit_intercept=True) model LinearRegression()  X = x[:, np.newaxis] X.shape (40, 1)  model.fit(X, y) LinearRegression()  model.coef_ array([1.99839352])  model.intercept_ -0.9895459457775022  xfit = np.</description>
+    </item>
+    
+    <item>
       <title>Train the model</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/sklearn/train-model/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/sklearn/train-model/</guid>
       <description>from sklearn.datasets import load_iris iris = load_iris()X = iris.data y = iris.targetfrom sklearn.model_selection import train_test_splitX_train, X_test, y_train, y_test = train_test_split( X, y, test_size = 0.4, random_state=1 )from sklearn.neighbors import KNeighborsClassifier from sklearn import metricsclassifier_knn = KNeighborsClassifier(n_neighbors = 3) classifier_knn.fit(X_train, y_train) KNeighborsClassifier(n_neighbors=3)  y_pred = classifier_knn.predict(X_test)print(&amp;#34;Accuracy:&amp;#34;, metrics.accuracy_score(y_test, y_pred)) Accuracy: 0.9833333333333333  sample = [[5, 5, 3, 2], [2, 4, 3, 5]]preds = classifier_knn.predict(sample) pred_species = [iris.target_names[p] for p in preds] print(&amp;#34;Predictions:&amp;#34;, pred_species) Predictions: [&#39;versicolor&#39;, &#39;virginica&#39;]  </description>
+    </item>
+    
+    <item>
+      <title>Unsupervised Learning</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sklearn/unsupervised-learnibg/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sklearn/unsupervised-learnibg/</guid>
+      <description>%matplotlib inline import matplotlib.pyplot as plt import numpy as np import seaborn as snsiris = sns.load_dataset(&amp;#39;iris&amp;#39;)X_iris = iris.drop(&amp;#39;species&amp;#39;, axis = 1) X_iris.shape (150, 4)  y_iris = iris[&amp;#39;species&amp;#39;] y_iris.shape (150,)  rng = np.random.RandomState(35) x = 10*rng.rand(40) y = 2*x-1+rng.randn(40) plt.scatter(x,y); from sklearn.decomposition import PCA model = PCA(n_components=2) model PCA(n_components=2)  model.fit(X_iris) PCA(n_components=2)  X_2D = model.transform(X_iris) iris[&amp;#39;PCA1&amp;#39;] = X_2D[:, 0] iris[&amp;#39;PCA2&amp;#39;] = X_2D[:, 1] sns.lmplot(&amp;#34;PCA1&amp;#34;, &amp;#34;PCA2&amp;#34;, hue=&amp;#39;species&amp;#39;, data=iris, fit_reg=False); </description>
     </item>
     
     <item>
