@@ -1,4 +1,3 @@
-```python
 ---
 title: "Concatenate"
 author: "Vignesh J M"
@@ -7,8 +6,6 @@ description: "-"
 type: technical_note
 draft: false
 ---
-```
-
 
 ```python
 from numpy import *

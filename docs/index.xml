@@ -75,6 +75,15 @@
     </item>
     
     <item>
+      <title>Concatenate</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/concatenate/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/concatenate/</guid>
+      <description>from numpy import *x = array([[1, 2],[3, 4]]) y = array([[5, 6],[7, 8]])concatenate((x, y)) array([[1, 2], [3, 4], [5, 6], [7, 8]])  concatenate((x, y), axis = 1) array([[1, 2, 5, 6], [3, 4, 7, 8]])  </description>
+    </item>
+    
+    <item>
       <title>Data Types</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/pandas/data-types/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -219,6 +228,15 @@
     </item>
     
     <item>
+      <title>Solve</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/solve/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/solve/</guid>
+      <description>from numpy import * from numpy.linalg import solvea = array([[3, 1, 5],[1, 0, 8],[2, 1, 4]]) b = array([6, 7, 8])x = solve(a, b)print(x) [-3.28571429 9.42857143 1.28571429]  dot(a, x) array([6., 7., 8.])  </description>
+    </item>
+    
+    <item>
       <title>Summary Functions</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/pandas/summary-functions/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -261,24 +279,6 @@
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/basics/python-equation/</guid>
       <description>a = 52 b = 657 c = 2 d = 6 print(a+b**c/d) 71993.5  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/concatenate/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/concatenate/</guid>
-      <description>--- title: &amp;#34;Concatenate&amp;#34; author: &amp;#34;Vignesh J M&amp;#34; date: 2020-09-04 description: &amp;#34;-&amp;#34; type: technical_note draft: false ---from numpy import *x = array([[1, 2],[3, 4]]) y = array([[5, 6],[7, 8]])concatenate((x, y)) array([[1, 2], [3, 4], [5, 6], [7, 8]])  concatenate((x, y), axis = 1) array([[1, 2, 5, 6], [3, 4, 7, 8]])  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/solve/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/solve/</guid>
-      <description>--- title: &amp;#34;Solve&amp;#34; author: &amp;#34;Vignesh J M&amp;#34; date: 2020-09-04 description: &amp;#34;-&amp;#34; type: technical_note draft: false ---from numpy import * from numpy.linalg import solvea = array([[3, 1, 5],[1, 0, 8],[2, 1, 4]]) b = array([6, 7, 8])x = solve(a, b)print(x) [-3.28571429 9.42857143 1.28571429]  dot(a, x) array([6., 7., 8.])  </description>
     </item>
     
   </channel>
