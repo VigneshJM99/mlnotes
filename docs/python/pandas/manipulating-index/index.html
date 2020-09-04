@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66582-32"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-66582-32');
+    </script>
+
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Manipulating the index" />
+<meta property="og:description" content="-" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://VigneshJM99.github.io/mlnotes/python/pandas/manipulating-index/" /><meta property="article:published_time" content="2020-09-04T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-09-04T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Manipulating the index"/>
+<meta name="twitter:description" content="-"/>
+<meta name="generator" content="Hugo 0.50" /> 
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Manipulating the index",
+  "url": "https://VigneshJM99.github.io/mlnotes/python/pandas/manipulating-index/",
+  "wordCount": "1061",
+  "datePublished": "2020-09-04T00:00:00&#43;00:00",
+  "dateModified": "2020-09-04T00:00:00&#43;00:00",
+  "author": {
+    "@type": "Person",
+    "name": "Vignesh J M"
+  },
+  "description": "-"
+}
+</script> 
+
+    <title>Manipulating the index</title>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+
+    
+    <link href="https://VigneshJM99.github.io/mlnotes/css/custom.css" rel="stylesheet"> 
+    <link href="https://VigneshJM99.github.io/mlnotes/css/syntax.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,500,700" rel="stylesheet">
+        
+    <link href="" rel="alternate" type="application/rss+xml" title="Vignesh" /> 
+    
+    <script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://VigneshJM99.github.io/mlnotes/">Vignesh</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav mr-auto"></ul>
+                <ul class="navbar-nav">
+                    
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            About
+                        </a>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                 
+
+
+<article>
+  <div class="technical_note">
+  <header>
+      
+    <h1 class="technical_note_title">Manipulating the index</h1>
+    <div class="technical_note_date">
+      <time datetime=" 2020-09-04T00:00:00Z "> 04 Sep 2020</time>
+    </div>
+  </header>
+  <div class="content">
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;Car_Pricing.xlsx&#39;</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&#34;Mileage&#34;</span><span class="p">)</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Year</th>
+      <th>Kilometers_Driven</th>
+      <th>Fuel_Type</th>
+      <th>Transmission</th>
+      <th>Owner_Type</th>
+      <th>Engine</th>
+      <th>Power</th>
+      <th>Seats</th>
+    </tr>
+    <tr>
+      <th>Mileage</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>32.26 km/kg</th>
+      <td>Maruti Alto K10 LXI CNG</td>
+      <td>Delhi</td>
+      <td>2014</td>
+      <td>40929</td>
+      <td>CNG</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>998 CC</td>
+      <td>58.2 bhp</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>24.7 kmpl</th>
+      <td>Maruti Alto 800 2016-2019 LXI</td>
+      <td>Coimbatore</td>
+      <td>2013</td>
+      <td>54493</td>
+      <td>Petrol</td>
+      <td>Manual</td>
+      <td>Second</td>
+      <td>796 CC</td>
+      <td>47.3 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>13.68 kmpl</th>
+      <td>Toyota Innova Crysta Touring Sport 2.4 MT</td>
+      <td>Mumbai</td>
+      <td>2017</td>
+      <td>34000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>2393 CC</td>
+      <td>147.8 bhp</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>23.59 kmpl</th>
+      <td>Toyota Etios Liva GD</td>
+      <td>Hyderabad</td>
+      <td>2012</td>
+      <td>139000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>1364 CC</td>
+      <td>null bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>18.5 kmpl</th>
+      <td>Hyundai i20 Magna</td>
+      <td>Mumbai</td>
+      <td>2014</td>
+      <td>29000</td>
+      <td>Petrol</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>1197 CC</td>
+      <td>82.85 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>20.54 kmpl</th>
+      <td>Volkswagen Vento Diesel Trendline</td>
+      <td>Hyderabad</td>
+      <td>2011</td>
+      <td>89411</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>1598 CC</td>
+      <td>103.6 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>17.21 kmpl</th>
+      <td>Volkswagen Polo GT TSI</td>
+      <td>Mumbai</td>
+      <td>2015</td>
+      <td>59000</td>
+      <td>Petrol</td>
+      <td>Automatic</td>
+      <td>First</td>
+      <td>1197 CC</td>
+      <td>103.6 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>23.08 kmpl</th>
+      <td>Nissan Micra Diesel XV</td>
+      <td>Kolkata</td>
+      <td>2012</td>
+      <td>28000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>1461 CC</td>
+      <td>63.1 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>17.2 kmpl</th>
+      <td>Volkswagen Polo GT TSI</td>
+      <td>Pune</td>
+      <td>2013</td>
+      <td>52262</td>
+      <td>Petrol</td>
+      <td>Automatic</td>
+      <td>Third</td>
+      <td>1197 CC</td>
+      <td>103.6 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>10.0 kmpl</th>
+      <td>Mercedes-Benz E-Class 2009-2013 E 220 CDI Avan...</td>
+      <td>Kochi</td>
+      <td>2014</td>
+      <td>72443</td>
+      <td>Diesel</td>
+      <td>Automatic</td>
+      <td>First</td>
+      <td>2148 CC</td>
+      <td>170 bhp</td>
+      <td>5.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1234 rows × 10 columns</p>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#Conditional Selection</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">Location</span> <span class="o">==</span> <span class="s2">&#34;Dehli&#34;</span></code></pre></div>
+<pre><code>0       False
+1       False
+2       False
+3       False
+4       False
+        ...  
+1229    False
+1230    False
+1231    False
+1232    False
+1233    False
+Name: Location, Length: 1234, dtype: bool
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Location</span> <span class="o">==</span> <span class="s1">&#39;Dehli&#39;</span><span class="p">]</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Year</th>
+      <th>Kilometers_Driven</th>
+      <th>Fuel_Type</th>
+      <th>Transmission</th>
+      <th>Owner_Type</th>
+      <th>Mileage</th>
+      <th>Engine</th>
+      <th>Power</th>
+      <th>Seats</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">Location</span> <span class="o">==</span> <span class="s1">&#39;Dehli&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Seats</span> <span class="o">&gt;</span><span class="mi">4</span><span class="p">)]</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Year</th>
+      <th>Kilometers_Driven</th>
+      <th>Fuel_Type</th>
+      <th>Transmission</th>
+      <th>Owner_Type</th>
+      <th>Mileage</th>
+      <th>Engine</th>
+      <th>Power</th>
+      <th>Seats</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">Location</span> <span class="o">==</span> <span class="s1">&#39;Dehli&#39;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Seats</span> <span class="o">&gt;</span><span class="mi">4</span><span class="p">)]</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Year</th>
+      <th>Kilometers_Driven</th>
+      <th>Fuel_Type</th>
+      <th>Transmission</th>
+      <th>Owner_Type</th>
+      <th>Mileage</th>
+      <th>Engine</th>
+      <th>Power</th>
+      <th>Seats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Maruti Alto 800 2016-2019 LXI</td>
+      <td>Coimbatore</td>
+      <td>2013</td>
+      <td>54493</td>
+      <td>Petrol</td>
+      <td>Manual</td>
+      <td>Second</td>
+      <td>24.7 kmpl</td>
+      <td>796 CC</td>
+      <td>47.3 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Toyota Innova Crysta Touring Sport 2.4 MT</td>
+      <td>Mumbai</td>
+      <td>2017</td>
+      <td>34000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>13.68 kmpl</td>
+      <td>2393 CC</td>
+      <td>147.8 bhp</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Toyota Etios Liva GD</td>
+      <td>Hyderabad</td>
+      <td>2012</td>
+      <td>139000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>23.59 kmpl</td>
+      <td>1364 CC</td>
+      <td>null bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Hyundai i20 Magna</td>
+      <td>Mumbai</td>
+      <td>2014</td>
+      <td>29000</td>
+      <td>Petrol</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>18.5 kmpl</td>
+      <td>1197 CC</td>
+      <td>82.85 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Mahindra XUV500 W8 2WD</td>
+      <td>Coimbatore</td>
+      <td>2016</td>
+      <td>85609</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>Second</td>
+      <td>16.0 kmpl</td>
+      <td>2179 CC</td>
+      <td>140 bhp</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1229</th>
+      <td>Volkswagen Vento Diesel Trendline</td>
+      <td>Hyderabad</td>
+      <td>2011</td>
+      <td>89411</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>20.54 kmpl</td>
+      <td>1598 CC</td>
+      <td>103.6 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1230</th>
+      <td>Volkswagen Polo GT TSI</td>
+      <td>Mumbai</td>
+      <td>2015</td>
+      <td>59000</td>
+      <td>Petrol</td>
+      <td>Automatic</td>
+      <td>First</td>
+      <td>17.21 kmpl</td>
+      <td>1197 CC</td>
+      <td>103.6 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1231</th>
+      <td>Nissan Micra Diesel XV</td>
+      <td>Kolkata</td>
+      <td>2012</td>
+      <td>28000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>23.08 kmpl</td>
+      <td>1461 CC</td>
+      <td>63.1 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1232</th>
+      <td>Volkswagen Polo GT TSI</td>
+      <td>Pune</td>
+      <td>2013</td>
+      <td>52262</td>
+      <td>Petrol</td>
+      <td>Automatic</td>
+      <td>Third</td>
+      <td>17.2 kmpl</td>
+      <td>1197 CC</td>
+      <td>103.6 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1233</th>
+      <td>Mercedes-Benz E-Class 2009-2013 E 220 CDI Avan...</td>
+      <td>Kochi</td>
+      <td>2014</td>
+      <td>72443</td>
+      <td>Diesel</td>
+      <td>Automatic</td>
+      <td>First</td>
+      <td>10.0 kmpl</td>
+      <td>2148 CC</td>
+      <td>170 bhp</td>
+      <td>5.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1201 rows × 11 columns</p>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Location</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;Dehli&#39;</span><span class="p">,</span> <span class="s1">&#39;Chennai&#39;</span><span class="p">])]</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Year</th>
+      <th>Kilometers_Driven</th>
+      <th>Fuel_Type</th>
+      <th>Transmission</th>
+      <th>Owner_Type</th>
+      <th>Mileage</th>
+      <th>Engine</th>
+      <th>Power</th>
+      <th>Seats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>12</th>
+      <td>Toyota Corolla H5</td>
+      <td>Chennai</td>
+      <td>2007</td>
+      <td>90000</td>
+      <td>Petrol</td>
+      <td>Manual</td>
+      <td>Third</td>
+      <td>13.4 kmpl</td>
+      <td>1794 CC</td>
+      <td>125 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Ford Ikon 1.4 TDCi DuraTorq</td>
+      <td>Chennai</td>
+      <td>2009</td>
+      <td>140000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>13.8 kmpl</td>
+      <td>1399 CC</td>
+      <td>68 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Toyota Etios Cross 1.4L VD</td>
+      <td>Chennai</td>
+      <td>2014</td>
+      <td>70000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>Second</td>
+      <td>23.59 kmpl</td>
+      <td>1364 CC</td>
+      <td>67.06 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Mitsubishi Pajero 2.8 SFX</td>
+      <td>Chennai</td>
+      <td>2012</td>
+      <td>121000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>10.5 kmpl</td>
+      <td>2835 CC</td>
+      <td>107.2 bhp</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Maruti Swift Dzire VXI</td>
+      <td>Chennai</td>
+      <td>2015</td>
+      <td>51000</td>
+      <td>Petrol</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>19.1 kmpl</td>
+      <td>1197 CC</td>
+      <td>85.8 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1176</th>
+      <td>Hyundai i10 Era 1.1</td>
+      <td>Chennai</td>
+      <td>2008</td>
+      <td>71467</td>
+      <td>Petrol</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>19.81 kmpl</td>
+      <td>1086 CC</td>
+      <td>68.05 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1203</th>
+      <td>Maruti Celerio VXI AT</td>
+      <td>Chennai</td>
+      <td>2015</td>
+      <td>31717</td>
+      <td>Petrol</td>
+      <td>Automatic</td>
+      <td>First</td>
+      <td>23.1 kmpl</td>
+      <td>998 CC</td>
+      <td>67.04 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1205</th>
+      <td>Datsun GO T Petrol</td>
+      <td>Chennai</td>
+      <td>2016</td>
+      <td>36000</td>
+      <td>Petrol</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>19.83 kmpl</td>
+      <td>1198 CC</td>
+      <td>67 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1208</th>
+      <td>Mahindra Renault Logan 1.5 DLE Diesel</td>
+      <td>Chennai</td>
+      <td>2007</td>
+      <td>160000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>Second</td>
+      <td>19.2 kmpl</td>
+      <td>1461 CC</td>
+      <td>65 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1224</th>
+      <td>Renault Duster 85PS Diesel RxL</td>
+      <td>Chennai</td>
+      <td>2015</td>
+      <td>70000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>19.87 kmpl</td>
+      <td>1461 CC</td>
+      <td>83.8 bhp</td>
+      <td>5.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>97 rows × 11 columns</p>
+</div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Seats</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span></code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Year</th>
+      <th>Kilometers_Driven</th>
+      <th>Fuel_Type</th>
+      <th>Transmission</th>
+      <th>Owner_Type</th>
+      <th>Mileage</th>
+      <th>Engine</th>
+      <th>Power</th>
+      <th>Seats</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Maruti Alto K10 LXI CNG</td>
+      <td>Delhi</td>
+      <td>2014</td>
+      <td>40929</td>
+      <td>CNG</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>32.26 km/kg</td>
+      <td>998 CC</td>
+      <td>58.2 bhp</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Maruti Alto 800 2016-2019 LXI</td>
+      <td>Coimbatore</td>
+      <td>2013</td>
+      <td>54493</td>
+      <td>Petrol</td>
+      <td>Manual</td>
+      <td>Second</td>
+      <td>24.7 kmpl</td>
+      <td>796 CC</td>
+      <td>47.3 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Toyota Innova Crysta Touring Sport 2.4 MT</td>
+      <td>Mumbai</td>
+      <td>2017</td>
+      <td>34000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>13.68 kmpl</td>
+      <td>2393 CC</td>
+      <td>147.8 bhp</td>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Toyota Etios Liva GD</td>
+      <td>Hyderabad</td>
+      <td>2012</td>
+      <td>139000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>23.59 kmpl</td>
+      <td>1364 CC</td>
+      <td>null bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Hyundai i20 Magna</td>
+      <td>Mumbai</td>
+      <td>2014</td>
+      <td>29000</td>
+      <td>Petrol</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>18.5 kmpl</td>
+      <td>1197 CC</td>
+      <td>82.85 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1229</th>
+      <td>Volkswagen Vento Diesel Trendline</td>
+      <td>Hyderabad</td>
+      <td>2011</td>
+      <td>89411</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>20.54 kmpl</td>
+      <td>1598 CC</td>
+      <td>103.6 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1230</th>
+      <td>Volkswagen Polo GT TSI</td>
+      <td>Mumbai</td>
+      <td>2015</td>
+      <td>59000</td>
+      <td>Petrol</td>
+      <td>Automatic</td>
+      <td>First</td>
+      <td>17.21 kmpl</td>
+      <td>1197 CC</td>
+      <td>103.6 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1231</th>
+      <td>Nissan Micra Diesel XV</td>
+      <td>Kolkata</td>
+      <td>2012</td>
+      <td>28000</td>
+      <td>Diesel</td>
+      <td>Manual</td>
+      <td>First</td>
+      <td>23.08 kmpl</td>
+      <td>1461 CC</td>
+      <td>63.1 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1232</th>
+      <td>Volkswagen Polo GT TSI</td>
+      <td>Pune</td>
+      <td>2013</td>
+      <td>52262</td>
+      <td>Petrol</td>
+      <td>Automatic</td>
+      <td>Third</td>
+      <td>17.2 kmpl</td>
+      <td>1197 CC</td>
+      <td>103.6 bhp</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1233</th>
+      <td>Mercedes-Benz E-Class 2009-2013 E 220 CDI Avan...</td>
+      <td>Kochi</td>
+      <td>2014</td>
+      <td>72443</td>
+      <td>Diesel</td>
+      <td>Automatic</td>
+      <td>First</td>
+      <td>10.0 kmpl</td>
+      <td>2148 CC</td>
+      <td>170 bhp</td>
+      <td>5.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1223 rows × 11 columns</p>
+</div>
+
+</div>
+  <aside>
+      
+      </aside>
+
+    </div>
+</article>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    
+
+    <footer class="footer text-center">
+        <div class="container">
+            <span class="text-muted">This project contains 19 pages and is available on <a href="https://github.com/VigneshJM99">GitHub</a>. Copyright &copy; TEAM TACT, <time datetime="2019">2019</time>.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
