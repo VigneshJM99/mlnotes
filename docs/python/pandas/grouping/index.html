@@ -16,14 +16,14 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Python-Addition" />
+<meta property="og:title" content="Grouping" />
 <meta property="og:description" content="-" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://VigneshJM99.github.io/mlnotes/python/basics/pyhton-addition/" /><meta property="article:published_time" content="2020-08-12T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2020-08-12T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://VigneshJM99.github.io/mlnotes/python/pandas/grouping/" /><meta property="article:published_time" content="2020-09-04T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-09-04T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Python-Addition"/>
+<meta name="twitter:title" content="Grouping"/>
 <meta name="twitter:description" content="-"/>
 <meta name="generator" content="Hugo 0.50" /> 
     
@@ -32,20 +32,20 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "Python-Addition",
-  "url": "https://VigneshJM99.github.io/mlnotes/python/basics/pyhton-addition/",
-  "wordCount": "9",
-  "datePublished": "2020-08-12T00:00:00&#43;00:00",
-  "dateModified": "2020-08-12T00:00:00&#43;00:00",
+  "headline": "Grouping",
+  "url": "https://VigneshJM99.github.io/mlnotes/python/pandas/grouping/",
+  "wordCount": "73",
+  "datePublished": "2020-09-04T00:00:00&#43;00:00",
+  "dateModified": "2020-09-04T00:00:00&#43;00:00",
   "author": {
     "@type": "Person",
-    "name": "Vignesh"
+    "name": "Vignesh J M"
   },
   "description": "-"
 }
 </script> 
 
-    <title>Python-Addition</title>
+    <title>Grouping</title>
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -117,17 +117,48 @@ MathJax.Hub.Config({
   <div class="technical_note">
   <header>
       
-    <h1 class="technical_note_title">Python-Addition</h1>
+    <h1 class="technical_note_title">Grouping</h1>
     <div class="technical_note_date">
-      <time datetime=" 2020-08-12T00:00:00Z "> 12 Aug 2020</time>
+      <time datetime=" 2020-09-04T00:00:00Z "> 04 Sep 2020</time>
     </div>
   </header>
   <div class="content">
-  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">a</span> <span class="o">=</span> <span class="mi">1999</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">2020</span>
-
-<span class="k">print</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span></code></pre></div>
-<pre><code>4019
+  <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;Car_Pricing.xlsx&#39;</span><span class="p">)</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Location&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">Location</span><span class="o">.</span><span class="n">count</span><span class="p">()</span></code></pre></div>
+<pre><code>Location
+Ahmedabad      51
+Bangalore      82
+Chennai        97
+Coimbatore    136
+Delhi         106
+Hyderabad     134
+Jaipur         86
+Kochi         121
+Kolkata       119
+Mumbai        159
+Pune          143
+Name: Location, dtype: int64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Fuel_Type&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">Fuel_Type</span><span class="o">.</span><span class="n">count</span><span class="p">()</span></code></pre></div>
+<pre><code>Fuel_Type
+CNG         6
+Diesel    647
+LPG         2
+Petrol    579
+Name: Fuel_Type, dtype: int64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Transmission&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">Transmission</span><span class="o">.</span><span class="n">count</span><span class="p">()</span></code></pre></div>
+<pre><code>Transmission
+Automatic    329
+Manual       905
+Name: Transmission, dtype: int64
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Owner_Type&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">Owner_Type</span><span class="o">.</span><span class="n">count</span><span class="p">()</span></code></pre></div>
+<pre><code>Owner_Type
+First             1023
+Fourth &amp; Above       3
+Second             184
+Third               24
+Name: Owner_Type, dtype: int64
 </code></pre>
 
 </div>
