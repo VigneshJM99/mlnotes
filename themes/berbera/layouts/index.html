@@ -63,13 +63,14 @@
             </div>
         </div>        
 
+
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
-                    <h4 class="card-header">Numpy Snippets</h4>
+                    <h4 class="card-header">Sklearn Snippets Snippets</h4>
                     <div class="card-body">
                         <ul>
-                            {{ range (where .Pages "File.Dir" "in" "/python/numpy/").ByTitle }}
+                            {{ range (where .Pages "File.Dir" "in" "/python/sklearn/").ByTitle }}
                                 {{ if ne .Title "Template" }}
                                 <li>
                                     <a href="{{.Permalink}}">{{.Title}}</a>
@@ -80,7 +81,7 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>                
 
 </main>
 {{ end }}
