@@ -66,6 +66,15 @@
     </item>
     
     <item>
+      <title>Binarisation</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/binarisation/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/binarisation/</guid>
+      <description>import numpy as np from sklearn import preprocessingInput_data = np.array([ [2.1, -1.9, 5.5], [-1.5, 2.4, 3.5], [0.5, -7.9, 5.6], [5.9, 2.3, -5.8]] )data_binarized = preprocessing.Binarizer(threshold=0.5).transform(Input_data)print(&amp;#34;\nBinarized data:\n&amp;#34;, data_binarized) Binarized data: [[1. 0. 1.] [0. 1. 1.] [0. 0. 1.] [1. 1. 0.]]  </description>
+    </item>
+    
+    <item>
       <title>Combining</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/pandas/combining/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -165,6 +174,33 @@
     </item>
     
     <item>
+      <title>Iris_Dataset</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/iris_dataset/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/iris_dataset/</guid>
+      <description>from sklearn.datasets import load_iris iris = load_iris() X = iris.data y = iris.target feature_names = iris.feature_names target_names = iris.target_namesprint(&amp;#34;Feature names:&amp;#34;, feature_names) print(&amp;#34;Target names:&amp;#34;, target_names) print(&amp;#34;\nFirst 10 rows of X:\n&amp;#34;, X[:10]) Feature names: [&#39;sepal length (cm)&#39;, &#39;sepal width (cm)&#39;, &#39;petal length (cm)&#39;, &#39;petal width (cm)&#39;] Target names: [&#39;setosa&#39; &#39;versicolor&#39; &#39;virginica&#39;] First 10 rows of X: [[5.1 3.5 1.4 0.2] [4.9 3. 1.4 0.2] [4.7 3.2 1.3 0.2] [4.6 3.1 1.5 0.2] [5.</description>
+    </item>
+    
+    <item>
+      <title>L1 Normalisation</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/l1-normalisation/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/l1-normalisation/</guid>
+      <description>import numpy as np from sklearn import preprocessingInput_data = np.array( [ [2.1, -1.9, 5.5], [-1.5, 2.4, 3.5], [0.5, -7.9, 5.6], [5.9, 2.3, -5.8] ] )data_normalized_l1 = preprocessing.normalize(Input_data, norm=&amp;#39;l1&amp;#39;)print(&amp;#34;\nL1 normalized data:\n&amp;#34;, data_normalized_l1) L1 normalized data: [[ 0.22105263 -0.2 0.57894737] [-0.2027027 0.32432432 0.47297297] [ 0.03571429 -0.56428571 0.4 ] [ 0.42142857 0.16428571 -0.41428571]]  </description>
+    </item>
+    
+    <item>
+      <title>L2 Normalisation</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/l2-normalisation/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/l2-normalisation/</guid>
+      <description>import numpy as np from sklearn import preprocessingInput_data = np.array( [ [2.1, -1.9, 5.5], [-1.5, 2.4, 3.5], [0.5, -7.9, 5.6], [5.9, 2.3, -5.8] ] )data_normalized_l2 = preprocessing.normalize(Input_data, norm=&amp;#39;l2&amp;#39;)print(&amp;#34;\nL2 normalized data:\n&amp;#34;, data_normalized_l2) L2 normalized data: [[ 0.33946114 -0.30713151 0.88906489] [-0.33325106 0.53320169 0.7775858 ] [ 0.05156558 -0.81473612 0.57753446] [ 0.68706914 0.26784051 -0.6754239 ]]  </description>
+    </item>
+    
+    <item>
       <title>Manipulating the index</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/pandas/manipulating-index/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -180,6 +216,15 @@
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/pandas/maps/</guid>
       <description>import pandas as pddf = pd.read_excel(&amp;#39;Car_Pricing.xlsx&amp;#39;)df_Km_mean = df.Kilometers_Driven.mean() df.Kilometers_Driven.map(lambda p: p - df_Km_mean) 0 -17578.288493 1 -4014.288493 2 -24507.288493 3 80492.711507 4 -29507.288493 ... 1229 30903.711507 1230 492.711507 1231 -30507.288493 1232 -6245.288493 1233 13935.711507 Name: Kilometers_Driven, Length: 1234, dtype: float64  def dfmean_km(row): row.Kilometers_Driven = row.Kilometers_Driven - df_Km_mean return row df.apply(dfmean_km, axis = &amp;#39;columns&amp;#39;)  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .</description>
+    </item>
+    
+    <item>
+      <title>Mean Removal</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/mean-removal/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/mean-removal/</guid>
+      <description>import numpy as np from sklearn import preprocessingInput_data = np.array([ [2.1, -1.9, 5.5], [-1.5, 2.4, 3.5], [0.5, -7.9, 5.6], [5.9, 2.3, -5.8]] )print(&amp;#34;Mean =&amp;#34;, Input_data.mean(axis=0)) print(&amp;#34;Stddeviation = &amp;#34;, Input_data.std(axis=0)) Mean = [ 1.75 -1.275 2.2 ] Stddeviation = [2.71431391 4.20022321 4.69414529]  data_scaled = preprocessing.scale(Input_data) print(&amp;#34;Mean_removed =&amp;#34;, data_scaled.mean(axis=0)) print(&amp;#34;Stddeviation_removed =&amp;#34;, data_scaled.std(axis=0)) Mean_removed = [1.11022302e-16 0.00000000e+00 0.00000000e+00] Stddeviation_removed = [1. 1. 1.]  </description>
     </item>
     
     <item>
@@ -219,6 +264,15 @@
     </item>
     
     <item>
+      <title>Scaling</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/scaling/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/scaling/</guid>
+      <description>import numpy as np from sklearn import preprocessingInput_data = np.array( [ [2.1, -1.9, 5.5], [-1.5, 2.4, 3.5], [0.5, -7.9, 5.6], [5.9, 2.3, -5.8] ] )data_scaler_minmax = preprocessing.MinMaxScaler(feature_range=(0,1)) data_scaled_minmax = data_scaler_minmax.fit_transform(Input_data)print (&amp;#34;\nMin max scaled data:\n&amp;#34;, data_scaled_minmax) Min max scaled data: [[0.48648649 0.58252427 0.99122807] [0. 1. 0.81578947] [0.27027027 0. 1. ] [1. 0.99029126 0. ]]  </description>
+    </item>
+    
+    <item>
       <title>Slice</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/numpy/slice/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -237,12 +291,30 @@
     </item>
     
     <item>
+      <title>Splitting the dataset</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/splitting-dataset/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/splitting-dataset/</guid>
+      <description>from sklearn.datasets import load_iris iris = load_iris()X = iris.data y = iris.targetfrom sklearn.model_selection import train_test_splitX_train, X_test, y_train, y_test = train_test_split( X, y, test_size = 0.3, random_state = 1 )print(X_train.shape) print(X_test.shape) (105, 4) (45, 4)  print(y_train.shape) print(y_test.shape) (105,) (45,)  </description>
+    </item>
+    
+    <item>
       <title>Summary Functions</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/pandas/summary-functions/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/pandas/summary-functions/</guid>
       <description>import pandas as pddf = pd.read_excel(&amp;#39;Car_Pricing.xlsx&amp;#39;)df.Mileage.describe() count 1234 unique 301 top 17.0 kmpl freq 35 Name: Mileage, dtype: object  df.Location.describe() count 1234 unique 11 top Mumbai freq 159 Name: Location, dtype: object  df.Seats.mean() 5.28454619787408  df.Location.unique() array([&#39;Delhi&#39;, &#39;Coimbatore&#39;, &#39;Mumbai&#39;, &#39;Hyderabad&#39;, &#39;Pune&#39;, &#39;Jaipur&#39;, &#39;Chennai&#39;, &#39;Kochi&#39;, &#39;Bangalore&#39;, &#39;Kolkata&#39;, &#39;Ahmedabad&#39;], dtype=object)  df.Name.value_counts() Maruti Alto LXi 9 Maruti Swift Dzire VDI 8 Honda City 1.5 V MT 8 Volkswagen Polo 1.2 MPI Highline 8 Honda Brio S MT 7 .</description>
+    </item>
+    
+    <item>
+      <title>Train the model</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/train-model/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/train-model/</guid>
+      <description>from sklearn.datasets import load_iris iris = load_iris()X = iris.data y = iris.targetfrom sklearn.model_selection import train_test_splitX_train, X_test, y_train, y_test = train_test_split( X, y, test_size = 0.4, random_state=1 )from sklearn.neighbors import KNeighborsClassifier from sklearn import metricsclassifier_knn = KNeighborsClassifier(n_neighbors = 3) classifier_knn.fit(X_train, y_train) KNeighborsClassifier(n_neighbors=3)  y_pred = classifier_knn.predict(X_test)print(&amp;#34;Accuracy:&amp;#34;, metrics.accuracy_score(y_test, y_pred)) Accuracy: 0.9833333333333333  sample = [[5, 5, 3, 2], [2, 4, 3, 5]]preds = classifier_knn.predict(sample) pred_species = [iris.target_names[p] for p in preds] print(&amp;#34;Predictions:&amp;#34;, pred_species) Predictions: [&#39;versicolor&#39;, &#39;virginica&#39;]  </description>
     </item>
     
     <item>

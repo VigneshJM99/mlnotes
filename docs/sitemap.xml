@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/binarisation/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://VigneshJM99.github.io/mlnotes/python/pandas/combining/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
@@ -88,12 +93,32 @@
   </url>
   
   <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/iris_dataset/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/l1-normalisation/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/l2-normalisation/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://VigneshJM99.github.io/mlnotes/python/pandas/manipulating-index/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://VigneshJM99.github.io/mlnotes/python/pandas/maps/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/mean-removal/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -118,6 +143,11 @@
   </url>
   
   <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/scaling/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://VigneshJM99.github.io/mlnotes/python/numpy/slice/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
@@ -128,7 +158,17 @@
   </url>
   
   <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/splitting-dataset/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://VigneshJM99.github.io/mlnotes/python/pandas/summary-functions/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/sqlalchemy/train-model/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
