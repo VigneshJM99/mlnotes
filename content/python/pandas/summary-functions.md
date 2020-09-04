@@ -1,5 +1,5 @@
 ---
-title: "Getting Started"
+title: "Summary Functions"
 author: "Vignesh J M"
 date: 2020-09-04
 description: "-"

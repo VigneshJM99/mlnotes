@@ -12,12 +12,57 @@
     
     
     <item>
+      <title>Accumulate</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/accumulate/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/accumulate/</guid>
+      <description>from numpy import *add.accumulate(array([1.,2.,3.,4.])) array([ 1., 3., 6., 10.])  array([1., 1.+2., (1.+2.)+3., ((1.+2.)+3.)+4.]) array([ 1., 3., 6., 10.])  multiply.accumulate(array([1.,2.,3.,4.])) array([ 1., 2., 6., 24.])  array([1., 1.*2., (1.*2.)*3., ((1.*2.)*3.)*4.]) array([ 1., 2., 6., 24.])  add.accumulate(array([[1,2,3],[4,5,6]]), axis = 0) array([[1, 2, 3], [5, 7, 9]])  add.accumulate(array([[1,2,3],[4,5,6]]), axis = 1) array([[ 1, 3, 6], [ 4, 9, 15]])  </description>
+    </item>
+    
+    <item>
+      <title>Add</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/add/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/add/</guid>
+      <description>from numpy import *add(array([-1.2, 1.2]), array([1,3])) array([-0.2, 4.2])  array([-1.2, 1.2]) + array([1,3]) array([-0.2, 4.2])  </description>
+    </item>
+    
+    <item>
+      <title>Append</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/append/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/append/</guid>
+      <description>from numpy import *a = array([10, 20, 30, 40]) append(a,50) array([10, 20, 30, 40, 50])  append(a, [50, 60]) array([10, 20, 30, 40, 50, 60])  a = array([[10, 20, 30],[40, 50, 60],[70, 80, 90]]) append(a,[[15, 15, 15]], axis = 0) array([[10, 20, 30], [40, 50, 60], [70, 80, 90], [15, 15, 15]])  append(a, [[15],[15],[15]], axis = 1) array([[10, 20, 30, 15], [40, 50, 60, 15], [70, 80, 90, 15]])  </description>
+    </item>
+    
+    <item>
+      <title>Array_Split</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/array_split/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/array_split/</guid>
+      <description>from numpy import *a = array([[1, 2, 3, 4],[5, 6, 7, 8]]) array_split(a, 2, axis = 0) [array([[1, 2, 3, 4]]), array([[5, 6, 7, 8]])]  array_split(a, 4, axis = 1) [array([[1], [5]]), array([[2], [6]]), array([[3], [7]]), array([[4], [8]])]  array_split(a, 3, axis = 1) [array([[1, 2], [5, 6]]), array([[3], [7]]), array([[4], [8]])]  array_split(a, [2, 3], axis = 1) [array([[1, 2], [5, 6]]), array([[3], [7]]), array([[4], [8]])]  </description>
+    </item>
+    
+    <item>
       <title>Assigning data</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/pandas/asssigning-data/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/pandas/asssigning-data/</guid>
       <description>import pandas as pddf = pd.read_excel(&amp;#39;Car_Pricing.xlsx&amp;#39;)df[&amp;#39;Review&amp;#39;] = &amp;#39;Ok&amp;#39;df[&amp;#39;Review&amp;#39;] 0 Ok 1 Ok 2 Ok 3 Ok 4 Ok .. 1229 Ok 1230 Ok 1231 Ok 1232 Ok 1233 Ok Name: Review, Length: 1234, dtype: object  df[&amp;#39;index_backwards&amp;#39;] = range(len(df), 0, -1) df[&amp;#39;index_backwards&amp;#39;] 0 1234 1 1233 2 1232 3 1231 4 1230 ... 1229 5 1230 4 1231 3 1232 2 1233 1 Name: index_backwards, Length: 1234, dtype: int64  </description>
+    </item>
+    
+    <item>
+      <title>Average</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/average/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/average/</guid>
+      <description>from numpy import *a = array([1, 2, 3, 4, 5]) w = array([0.1, 0.2, 0.3, 0.4, 0.5])average(a) 3.0  average(a, weights = w) 3.6666666666666665  average(a, weights = w, returned = True) (3.6666666666666665, 1.5)  </description>
     </item>
     
     <item>
@@ -30,7 +75,7 @@
     </item>
     
     <item>
-      <title>Getting Started</title>
+      <title>Data Types</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/pandas/data-types/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -45,15 +90,6 @@
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/pandas/getting-started/</guid>
       <description>import pandas as pdpd.DataFrame({&amp;#39;Yes&amp;#39;: [50, 21], &amp;#39;No&amp;#39;: [131, 2]})  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Yes No     0 50 131   1 21 2     pd.DataFrame({&amp;#39;Bob&amp;#39;: [&amp;#39;I liked it.&amp;#39;, &amp;#39;It was awful.&amp;#39;], &amp;#39;Sue&amp;#39;: [&amp;#39;Pretty good.&amp;#39;, &amp;#39;Bland.&amp;#39;]})  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .</description>
-    </item>
-    
-    <item>
-      <title>Getting Started</title>
-      <link>https://VigneshJM99.github.io/mlnotes/python/pandas/summary-functions/</link>
-      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://VigneshJM99.github.io/mlnotes/python/pandas/summary-functions/</guid>
-      <description>import pandas as pddf = pd.read_excel(&amp;#39;Car_Pricing.xlsx&amp;#39;)df.Mileage.describe() count 1234 unique 301 top 17.0 kmpl freq 35 Name: Mileage, dtype: object  df.Location.describe() count 1234 unique 11 top Mumbai freq 159 Name: Location, dtype: object  df.Seats.mean() 5.28454619787408  df.Location.unique() array([&#39;Delhi&#39;, &#39;Coimbatore&#39;, &#39;Mumbai&#39;, &#39;Hyderabad&#39;, &#39;Pune&#39;, &#39;Jaipur&#39;, &#39;Chennai&#39;, &#39;Kochi&#39;, &#39;Bangalore&#39;, &#39;Kolkata&#39;, &#39;Ahmedabad&#39;], dtype=object)  df.Name.value_counts() Maruti Alto LXi 9 Maruti Swift Dzire VDI 8 Honda City 1.5 V MT 8 Volkswagen Polo 1.2 MPI Highline 8 Honda Brio S MT 7 .</description>
     </item>
     
     <item>
@@ -111,6 +147,15 @@
     </item>
     
     <item>
+      <title>Insert</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/insert/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/insert/</guid>
+      <description>from numpy import *a = array([10, 20, 30, 40]) insert(a, [1,3], 50) array([10, 50, 20, 30, 50, 40])  insert(a, [1, 3],[50,60]) array([10, 50, 20, 30, 60, 40])  a = array([[10, 20, 30],[40, 50, 60],[70, 80, 90]]) insert(a, [1, 2], 100, axis = 0) array([[ 10, 20, 30], [100, 100, 100], [ 40, 50, 60], [100, 100, 100], [ 70, 80, 90]])  insert(a, [0,1], [[100], [200]], axis = 0) array([[100, 100, 100], [ 10, 20, 30], [200, 200, 200], [ 40, 50, 60], [ 70, 80, 90]])  insert(a, [0, 1], [100, 200], axis = 1) array([[100, 10, 200, 20, 30], [100, 40, 200, 50, 60], [100, 70, 200, 80, 90]])  </description>
+    </item>
+    
+    <item>
       <title>Manipulating the index</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/pandas/manipulating-index/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -138,12 +183,48 @@
     </item>
     
     <item>
+      <title>Permutation</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/permutation/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/permutation/</guid>
+      <description>from numpy import * from numpy.random import permutationpermutation(4) array([2, 3, 0, 1])  permutation(4) array([3, 0, 1, 2])  </description>
+    </item>
+    
+    <item>
+      <title>Rand</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/rand/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/rand/</guid>
+      <description>from numpy import * from numpy.random import *rand(3, 2) array([[0.16835396, 0.03128012], [0.9387805 , 0.85898781], [0.07398522, 0.56233265]])  </description>
+    </item>
+    
+    <item>
       <title>Renaming</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/pandas/renaming/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/pandas/renaming/</guid>
       <description>import pandas as pddf = pd.read_excel(&amp;#39;Car_Pricing.xlsx&amp;#39;)df.rename(columns = {&amp;#39;Seats&amp;#39;:&amp;#39;Capacity&amp;#39;})  .dataframe tbody tr th:only-of-type { vertical-align: middle; } .dataframe tbody tr th { vertical-align: top; } .dataframe thead th { text-align: right; }    Name Location Year Kilometers_Driven Fuel_Type Transmission Owner_Type Mileage Engine Power Capacity     0 Maruti Alto K10 LXI CNG Delhi 2014 40929 CNG Manual First 32.26 km/kg 998 CC 58.2 bhp 4.0   1 Maruti Alto 800 2016-2019 LXI Coimbatore 2013 54493 Petrol Manual Second 24.</description>
+    </item>
+    
+    <item>
+      <title>Slice</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/slice/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/slice/</guid>
+      <description>from numpy import *s = slice(3, 9, 2)a = arange(20) a[s] array([3, 5, 7])  a[3:9:2] array([3, 5, 7])  </description>
+    </item>
+    
+    <item>
+      <title>Summary Functions</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/pandas/summary-functions/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/pandas/summary-functions/</guid>
+      <description>import pandas as pddf = pd.read_excel(&amp;#39;Car_Pricing.xlsx&amp;#39;)df.Mileage.describe() count 1234 unique 301 top 17.0 kmpl freq 35 Name: Mileage, dtype: object  df.Location.describe() count 1234 unique 11 top Mumbai freq 159 Name: Location, dtype: object  df.Seats.mean() 5.28454619787408  df.Location.unique() array([&#39;Delhi&#39;, &#39;Coimbatore&#39;, &#39;Mumbai&#39;, &#39;Hyderabad&#39;, &#39;Pune&#39;, &#39;Jaipur&#39;, &#39;Chennai&#39;, &#39;Kochi&#39;, &#39;Bangalore&#39;, &#39;Kolkata&#39;, &#39;Ahmedabad&#39;], dtype=object)  df.Name.value_counts() Maruti Alto LXi 9 Maruti Swift Dzire VDI 8 Honda City 1.5 V MT 8 Volkswagen Polo 1.2 MPI Highline 8 Honda Brio S MT 7 .</description>
     </item>
     
     <item>
@@ -180,6 +261,24 @@
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/basics/python-equation/</guid>
       <description>a = 52 b = 657 c = 2 d = 6 print(a+b**c/d) 71993.5  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/concatenate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/concatenate/</guid>
+      <description>--- title: &amp;#34;Concatenate&amp;#34; author: &amp;#34;Vignesh J M&amp;#34; date: 2020-09-04 description: &amp;#34;-&amp;#34; type: technical_note draft: false ---from numpy import *x = array([[1, 2],[3, 4]]) y = array([[5, 6],[7, 8]])concatenate((x, y)) array([[1, 2], [3, 4], [5, 6], [7, 8]])  concatenate((x, y), axis = 1) array([[1, 2, 5, 6], [3, 4, 7, 8]])  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/numpy/solve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/solve/</guid>
+      <description>--- title: &amp;#34;Solve&amp;#34; author: &amp;#34;Vignesh J M&amp;#34; date: 2020-09-04 description: &amp;#34;-&amp;#34; type: technical_note draft: false ---from numpy import * from numpy.linalg import solvea = array([[3, 1, 5],[1, 0, 8],[2, 1, 4]]) b = array([6, 7, 8])x = solve(a, b)print(x) [-3.28571429 9.42857143 1.28571429]  dot(a, x) array([6., 7., 8.])  </description>
     </item>
     
   </channel>
