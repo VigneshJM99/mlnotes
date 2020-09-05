@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Aggregation And Representing Uncertainity</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/agg-rep-unc/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/agg-rep-unc/</guid>
+      <description>import numpy as np import pandas as pd import matplotlib.pyplot as plt import seaborn as sns sns.set(style=&amp;#34;darkgrid&amp;#34;)fmri = sns.load_dataset(&amp;#34;fmri&amp;#34;) sns.relplot(x=&amp;#34;timepoint&amp;#34;, y=&amp;#34;signal&amp;#34;, kind=&amp;#34;line&amp;#34;, data=fmri); sns.relplot(x=&amp;#34;timepoint&amp;#34;, y=&amp;#34;signal&amp;#34;, ci=None, kind=&amp;#34;line&amp;#34;, data=fmri); sns.relplot(x=&amp;#34;timepoint&amp;#34;, y=&amp;#34;signal&amp;#34;, kind=&amp;#34;line&amp;#34;, ci=&amp;#34;sd&amp;#34;, data=fmri); sns.relplot(x=&amp;#34;timepoint&amp;#34;, y=&amp;#34;signal&amp;#34;, estimator=None, kind=&amp;#34;line&amp;#34;, data=fmri); </description>
+    </item>
+    
+    <item>
       <title>Append</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/numpy/append/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
@@ -66,12 +75,39 @@
     </item>
     
     <item>
+      <title>Bar plots</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/bar-plots/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/bar-plots/</guid>
+      <description>import seaborn as sns import matplotlib.pyplot as plt sns.set(style=&amp;#34;ticks&amp;#34;, color_codes=True)titanic = sns.load_dataset(&amp;#34;titanic&amp;#34;) sns.catplot(x=&amp;#34;sex&amp;#34;, y=&amp;#34;survived&amp;#34;, hue=&amp;#34;class&amp;#34;, kind=&amp;#34;bar&amp;#34;, data=titanic); sns.catplot(x=&amp;#34;deck&amp;#34;, kind=&amp;#34;count&amp;#34;, palette=&amp;#34;ch:.25&amp;#34;, data=titanic); sns.catplot(y=&amp;#34;deck&amp;#34;, hue=&amp;#34;class&amp;#34;, kind=&amp;#34;count&amp;#34;, palette=&amp;#34;pastel&amp;#34;, edgecolor=&amp;#34;.6&amp;#34;, data=titanic); </description>
+    </item>
+    
+    <item>
       <title>Binarisation</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/sklearn/binarisation/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/sklearn/binarisation/</guid>
       <description>import numpy as np from sklearn import preprocessingInput_data = np.array([ [2.1, -1.9, 5.5], [-1.5, 2.4, 3.5], [0.5, -7.9, 5.6], [5.9, 2.3, -5.8]] )data_binarized = preprocessing.Binarizer(threshold=0.5).transform(Input_data)print(&amp;#34;\nBinarized data:\n&amp;#34;, data_binarized) Binarized data: [[1. 0. 1.] [0. 1. 1.] [0. 0. 1.] [1. 1. 0.]]  </description>
+    </item>
+    
+    <item>
+      <title>Boxplots</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/boxplots/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/boxplots/</guid>
+      <description>import seaborn as sns import matplotlib.pyplot as plt sns.set(style=&amp;#34;ticks&amp;#34;, color_codes=True)tips = sns.load_dataset(&amp;#34;tips&amp;#34;)sns.catplot(x=&amp;#34;day&amp;#34;, y=&amp;#34;total_bill&amp;#34;, kind=&amp;#34;box&amp;#34;, data=tips); sns.catplot(x=&amp;#34;day&amp;#34;, y=&amp;#34;total_bill&amp;#34;, hue=&amp;#34;smoker&amp;#34;, kind=&amp;#34;box&amp;#34;, data=tips); tips[&amp;#34;weekend&amp;#34;] = tips[&amp;#34;day&amp;#34;].isin([&amp;#34;Sat&amp;#34;, &amp;#34;Sun&amp;#34;]) sns.catplot(x=&amp;#34;day&amp;#34;, y=&amp;#34;total_bill&amp;#34;, hue=&amp;#34;weekend&amp;#34;, kind=&amp;#34;box&amp;#34;, dodge=False, data=tips); diamonds = sns.load_dataset(&amp;#34;diamonds&amp;#34;) sns.catplot(x=&amp;#34;color&amp;#34;, y=&amp;#34;price&amp;#34;, kind=&amp;#34;boxen&amp;#34;, data=diamonds.sort_values(&amp;#34;color&amp;#34;)); </description>
+    </item>
+    
+    <item>
+      <title>Categorical scatterplots</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/categorical-scatterplots/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/categorical-scatterplots/</guid>
+      <description>import seaborn as sns import matplotlib.pyplot as plt sns.set(style=&amp;#34;ticks&amp;#34;, color_codes=True)tips = sns.load_dataset(&amp;#34;tips&amp;#34;) sns.catplot(x=&amp;#34;day&amp;#34;, y=&amp;#34;total_bill&amp;#34;, data=tips); sns.catplot(x=&amp;#34;day&amp;#34;, y=&amp;#34;total_bill&amp;#34;, jitter=False, data=tips); sns.catplot(x=&amp;#34;day&amp;#34;, y=&amp;#34;total_bill&amp;#34;, kind=&amp;#34;swarm&amp;#34;, data=tips); sns.catplot(x=&amp;#34;day&amp;#34;, y=&amp;#34;total_bill&amp;#34;, hue=&amp;#34;sex&amp;#34;, kind=&amp;#34;swarm&amp;#34;, data=tips); sns.catplot(x=&amp;#34;size&amp;#34;, y=&amp;#34;total_bill&amp;#34;, kind=&amp;#34;swarm&amp;#34;, data=tips.query(&amp;#34;size != 3&amp;#34;)); sns.catplot(x=&amp;#34;smoker&amp;#34;, y=&amp;#34;tip&amp;#34;, order=[&amp;#34;No&amp;#34;, &amp;#34;Yes&amp;#34;], data=tips); sns.catplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;day&amp;#34;, hue=&amp;#34;time&amp;#34;, kind=&amp;#34;swarm&amp;#34;, data=tips); </description>
     </item>
     
     <item>
@@ -90,6 +126,15 @@
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/concatenate/</guid>
       <description>from numpy import *x = array([[1, 2],[3, 4]]) y = array([[5, 6],[7, 8]])concatenate((x, y)) array([[1, 2], [3, 4], [5, 6], [7, 8]])  concatenate((x, y), axis = 1) array([[1, 2, 5, 6], [3, 4, 7, 8]])  </description>
+    </item>
+    
+    <item>
+      <title>Continuity With Line Plots</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/continuity-with-line-plots/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/continuity-with-line-plots/</guid>
+      <description>import numpy as np import pandas as pd import matplotlib.pyplot as plt import seaborn as sns sns.set(style=&amp;#34;darkgrid&amp;#34;)df = pd.DataFrame(dict(time=np.arange(500), value=np.random.randn(500).cumsum())) g = sns.relplot(x=&amp;#34;time&amp;#34;, y=&amp;#34;value&amp;#34;, kind=&amp;#34;line&amp;#34;, data=df) g.fig.autofmt_xdate() df = pd.DataFrame(np.random.randn(500, 2).cumsum(axis=0), columns=[&amp;#34;x&amp;#34;, &amp;#34;y&amp;#34;]) sns.relplot(x=&amp;#34;x&amp;#34;, y=&amp;#34;y&amp;#34;, sort=False, kind=&amp;#34;line&amp;#34;, data=df); </description>
     </item>
     
     <item>
@@ -273,12 +318,48 @@
     </item>
     
     <item>
+      <title>Plotting subsets of data with semantic mappings</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/plotting-subsets-of-data-with-semantic-mappings/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/plotting-subsets-of-data-with-semantic-mappings/</guid>
+      <description>import numpy as np import pandas as pd import matplotlib.pyplot as plt import seaborn as sns sns.set(style=&amp;#34;darkgrid&amp;#34;)fmri = sns.load_dataset(&amp;#34;fmri&amp;#34;) sns.relplot(x=&amp;#34;timepoint&amp;#34;, y=&amp;#34;signal&amp;#34;, hue=&amp;#34;event&amp;#34;, kind=&amp;#34;line&amp;#34;, data=fmri); sns.relplot(x=&amp;#34;timepoint&amp;#34;, y=&amp;#34;signal&amp;#34;, hue=&amp;#34;region&amp;#34;, style=&amp;#34;event&amp;#34;, kind=&amp;#34;line&amp;#34;, data=fmri); sns.relplot(x=&amp;#34;timepoint&amp;#34;, y=&amp;#34;signal&amp;#34;, hue=&amp;#34;region&amp;#34;, style=&amp;#34;event&amp;#34;, dashes=False, markers=True, kind=&amp;#34;line&amp;#34;, data=fmri); sns.relplot(x=&amp;#34;timepoint&amp;#34;, y=&amp;#34;signal&amp;#34;, hue=&amp;#34;event&amp;#34;, style=&amp;#34;event&amp;#34;, kind=&amp;#34;line&amp;#34;, data=fmri); sns.relplot(x=&amp;#34;timepoint&amp;#34;, y=&amp;#34;signal&amp;#34;, hue=&amp;#34;region&amp;#34;, units=&amp;#34;subject&amp;#34;, estimator=None, kind=&amp;#34;line&amp;#34;, data=fmri.query(&amp;#34;event == &amp;#39;stim&amp;#39;&amp;#34;)); dots = sns.load_dataset(&amp;#34;dots&amp;#34;).query(&amp;#34;align == &amp;#39;dots&amp;#39;&amp;#34;) sns.relplot(x=&amp;#34;time&amp;#34;, y=&amp;#34;firing_rate&amp;#34;, hue=&amp;#34;coherence&amp;#34;, style=&amp;#34;choice&amp;#34;, kind=&amp;#34;line&amp;#34;, data=dots); dots = sns.load_dataset(&amp;#34;dots&amp;#34;).query(&amp;#34;align == &amp;#39;dots&amp;#39;&amp;#34;) sns.relplot(x=&amp;#34;time&amp;#34;, y=&amp;#34;firing_rate&amp;#34;, hue=&amp;#34;coherence&amp;#34;, style=&amp;#34;choice&amp;#34;, kind=&amp;#34;line&amp;#34;, data=dots); palette = sns.</description>
+    </item>
+    
+    <item>
+      <title>Plotting with date data</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/plotting-with-date-data/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/plotting-with-date-data/</guid>
+      <description>import numpy as np import pandas as pd import matplotlib.pyplot as plt import seaborn as sns sns.set(style=&amp;#34;darkgrid&amp;#34;)df = pd.DataFrame(dict(time=pd.date_range(&amp;#34;2017-1-1&amp;#34;, periods=500), value=np.random.randn(500).cumsum())) g = sns.relplot(x=&amp;#34;time&amp;#34;, y=&amp;#34;value&amp;#34;, kind=&amp;#34;line&amp;#34;, data=df) g.fig.autofmt_xdate() </description>
+    </item>
+    
+    <item>
+      <title>Point plots</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/point-plots/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/point-plots/</guid>
+      <description>import seaborn as sns import matplotlib.pyplot as plt sns.set(style=&amp;#34;ticks&amp;#34;, color_codes=True)titanic = sns.load_dataset(&amp;#34;titanic&amp;#34;)sns.catplot(x=&amp;#34;sex&amp;#34;, y=&amp;#34;survived&amp;#34;, hue=&amp;#34;class&amp;#34;, kind=&amp;#34;point&amp;#34;, data=titanic); sns.catplot(x=&amp;#34;class&amp;#34;, y=&amp;#34;survived&amp;#34;, hue=&amp;#34;sex&amp;#34;, palette={&amp;#34;male&amp;#34;: &amp;#34;g&amp;#34;, &amp;#34;female&amp;#34;: &amp;#34;m&amp;#34;}, markers=[&amp;#34;^&amp;#34;, &amp;#34;o&amp;#34;], linestyles=[&amp;#34;-&amp;#34;, &amp;#34;--&amp;#34;], kind=&amp;#34;point&amp;#34;, data=titanic); </description>
+    </item>
+    
+    <item>
       <title>Rand</title>
       <link>https://VigneshJM99.github.io/mlnotes/python/numpy/rand/</link>
       <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/numpy/rand/</guid>
       <description>from numpy import * from numpy.random import *rand(3, 2) array([[0.16835396, 0.03128012], [0.9387805 , 0.85898781], [0.07398522, 0.56233265]])  </description>
+    </item>
+    
+    <item>
+      <title>Relating Variables With Scatter Plots</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/relating-scatter-plots/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/relating-scatter-plots/</guid>
+      <description>import numpy as np import pandas as pd import matplotlib.pyplot as plt import seaborn as sns sns.set(style=&amp;#34;darkgrid&amp;#34;)tips = sns.load_dataset(&amp;#34;tips&amp;#34;) sns.relplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;tip&amp;#34;, data=tips); sns.relplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;tip&amp;#34;, hue=&amp;#34;smoker&amp;#34;, data=tips); sns.relplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;tip&amp;#34;, hue=&amp;#34;smoker&amp;#34;, style=&amp;#34;smoker&amp;#34;, data=tips); sns.relplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;tip&amp;#34;, hue=&amp;#34;smoker&amp;#34;, style=&amp;#34;time&amp;#34;, data=tips); sns.relplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;tip&amp;#34;, hue=&amp;#34;size&amp;#34;, data=tips); sns.relplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;tip&amp;#34;, hue=&amp;#34;size&amp;#34;, palette=&amp;#34;ch:r=-.5,l=.75&amp;#34;, data=tips); sns.relplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;tip&amp;#34;, size=&amp;#34;size&amp;#34;, data=tips); sns.relplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;tip&amp;#34;, size=&amp;#34;size&amp;#34;, sizes=(15, 200), data=tips); </description>
     </item>
     
     <item>
@@ -297,6 +378,15 @@
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/sklearn/scaling/</guid>
       <description>import numpy as np from sklearn import preprocessingInput_data = np.array( [ [2.1, -1.9, 5.5], [-1.5, 2.4, 3.5], [0.5, -7.9, 5.6], [5.9, 2.3, -5.8] ] )data_scaler_minmax = preprocessing.MinMaxScaler(feature_range=(0,1)) data_scaled_minmax = data_scaler_minmax.fit_transform(Input_data)print (&amp;#34;\nMin max scaled data:\n&amp;#34;, data_scaled_minmax) Min max scaled data: [[0.48648649 0.58252427 0.99122807] [0. 1. 0.81578947] [0.27027027 0. 1. ] [1. 0.99029126 0. ]]  </description>
+    </item>
+    
+    <item>
+      <title>Showing multiple relationships with facets</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/showing-multiple-relationships-with-facets/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/showing-multiple-relationships-with-facets/</guid>
+      <description>import numpy as np import pandas as pd import matplotlib.pyplot as plt import seaborn as sns sns.set(style=&amp;#34;darkgrid&amp;#34;)tips = sns.load_dataset(&amp;#34;tips&amp;#34;) sns.relplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;tip&amp;#34;, hue=&amp;#34;smoker&amp;#34;, col=&amp;#34;time&amp;#34;, data=tips); fmri = sns.load_dataset(&amp;#34;fmri&amp;#34;) sns.relplot(x=&amp;#34;timepoint&amp;#34;, y=&amp;#34;signal&amp;#34;, hue=&amp;#34;subject&amp;#34;, col=&amp;#34;region&amp;#34;, row=&amp;#34;event&amp;#34;, height=3, kind=&amp;#34;line&amp;#34;, estimator=None, data=fmri); sns.relplot(x=&amp;#34;timepoint&amp;#34;, y=&amp;#34;signal&amp;#34;, hue=&amp;#34;event&amp;#34;, style=&amp;#34;event&amp;#34;, col=&amp;#34;subject&amp;#34;, col_wrap=5, height=3, aspect=.75, linewidth=2.5, kind=&amp;#34;line&amp;#34;, data=fmri.query(&amp;#34;region == &amp;#39;frontal&amp;#39;&amp;#34;)); </description>
     </item>
     
     <item>
@@ -360,6 +450,15 @@
       
       <guid>https://VigneshJM99.github.io/mlnotes/python/sklearn/unsupervised-learnibg/</guid>
       <description>%matplotlib inline import matplotlib.pyplot as plt import numpy as np import seaborn as snsiris = sns.load_dataset(&amp;#39;iris&amp;#39;)X_iris = iris.drop(&amp;#39;species&amp;#39;, axis = 1) X_iris.shape (150, 4)  y_iris = iris[&amp;#39;species&amp;#39;] y_iris.shape (150,)  rng = np.random.RandomState(35) x = 10*rng.rand(40) y = 2*x-1+rng.randn(40) plt.scatter(x,y); from sklearn.decomposition import PCA model = PCA(n_components=2) model PCA(n_components=2)  model.fit(X_iris) PCA(n_components=2)  X_2D = model.transform(X_iris) iris[&amp;#39;PCA1&amp;#39;] = X_2D[:, 0] iris[&amp;#39;PCA2&amp;#39;] = X_2D[:, 1] sns.lmplot(&amp;#34;PCA1&amp;#34;, &amp;#34;PCA2&amp;#34;, hue=&amp;#39;species&amp;#39;, data=iris, fit_reg=False); </description>
+    </item>
+    
+    <item>
+      <title>violinplots</title>
+      <link>https://VigneshJM99.github.io/mlnotes/python/seaborn/violinplots/</link>
+      <pubDate>Fri, 04 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://VigneshJM99.github.io/mlnotes/python/seaborn/violinplots/</guid>
+      <description>import seaborn as sns import matplotlib.pyplot as plt sns.set(style=&amp;#34;ticks&amp;#34;, color_codes=True)tips = sns.load_dataset(&amp;#34;tips&amp;#34;)sns.catplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;day&amp;#34;, hue=&amp;#34;sex&amp;#34;, kind=&amp;#34;violin&amp;#34;, data=tips); sns.catplot(x=&amp;#34;total_bill&amp;#34;, y=&amp;#34;day&amp;#34;, hue=&amp;#34;sex&amp;#34;, kind=&amp;#34;violin&amp;#34;, bw=.15, cut=0, data=tips); sns.catplot(x=&amp;#34;day&amp;#34;, y=&amp;#34;total_bill&amp;#34;, hue=&amp;#34;sex&amp;#34;, kind=&amp;#34;violin&amp;#34;, split=True, data=tips); sns.catplot(x=&amp;#34;day&amp;#34;, y=&amp;#34;total_bill&amp;#34;, hue=&amp;#34;sex&amp;#34;, kind=&amp;#34;violin&amp;#34;, inner=&amp;#34;stick&amp;#34;, split=True, palette=&amp;#34;pastel&amp;#34;, data=tips); g = sns.catplot(x=&amp;#34;day&amp;#34;, y=&amp;#34;total_bill&amp;#34;, kind=&amp;#34;violin&amp;#34;, inner=None, data=tips) sns.swarmplot(x=&amp;#34;day&amp;#34;, y=&amp;#34;total_bill&amp;#34;, color=&amp;#34;k&amp;#34;, size=3, data=tips, ax=g.ax); </description>
     </item>
     
     <item>

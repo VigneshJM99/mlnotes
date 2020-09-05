@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/seaborn/agg-rep-unc/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://VigneshJM99.github.io/mlnotes/python/numpy/append/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
@@ -33,7 +38,22 @@
   </url>
   
   <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/seaborn/bar-plots/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://VigneshJM99.github.io/mlnotes/python/sklearn/binarisation/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/seaborn/boxplots/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/seaborn/categorical-scatterplots/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -44,6 +64,11 @@
   
   <url>
     <loc>https://VigneshJM99.github.io/mlnotes/python/numpy/concatenate/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/seaborn/continuity-with-line-plots/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -148,7 +173,27 @@
   </url>
   
   <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/seaborn/plotting-subsets-of-data-with-semantic-mappings/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/seaborn/plotting-with-date-data/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/seaborn/point-plots/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://VigneshJM99.github.io/mlnotes/python/numpy/rand/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/seaborn/relating-scatter-plots/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -159,6 +204,11 @@
   
   <url>
     <loc>https://VigneshJM99.github.io/mlnotes/python/sklearn/scaling/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/seaborn/showing-multiple-relationships-with-facets/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -194,6 +244,11 @@
   
   <url>
     <loc>https://VigneshJM99.github.io/mlnotes/python/sklearn/unsupervised-learnibg/</loc>
+    <lastmod>2020-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://VigneshJM99.github.io/mlnotes/python/seaborn/violinplots/</loc>
     <lastmod>2020-09-04T00:00:00+00:00</lastmod>
   </url>
   
